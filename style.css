@@ -235,9 +235,7 @@ footer .box{
     position: absolute;
     bottom: 50px;
     right: 95px;
-    background-image: url("pexels-gamol-11584395\ \(2160p\).mp4");
 }
-
 footer .box h5{
     padding: 9px;
     background: #494747;
@@ -251,7 +249,7 @@ footer .box .list{
     height: 230px;
     width: 248px;
     background-repeat: no-repeat;
-    background: url(/backgroundVideo/giphy.gif);
+    background: url(giphy.gif);
     background-position: bottom;
     background-size: cover;
 }
