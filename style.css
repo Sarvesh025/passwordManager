@@ -8,7 +8,6 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 color: white;
-background: url('/backgroundVideo/pexels-crazy-motions-12920674\ \(1080p\).mp4')
 }
 video{
     position: absolute;
@@ -236,7 +235,7 @@ footer .box{
     position: absolute;
     bottom: 50px;
     right: 95px;
-    background-image: url("/backgroundVideo/pexels-gamol-11584395\ \(2160p\).mp4");
+    background-image: url("pexels-gamol-11584395\ \(2160p\).mp4");
 }
 
 footer .box h5{
