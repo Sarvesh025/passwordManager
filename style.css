@@ -1,0 +1,282 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+min-height: 100vh;
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+color: white;
+background: url('/backgroundVideo/pexels-crazy-motions-12920674\ \(1080p\).mp4')
+}
+video{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -5;
+    filter: brightness(0.5);
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: #00BCD4;
+    height: 65px;
+    font-size: x-large;
+    padding-left: 20px;
+    opacity: 0.8;
+    font-style: italic;
+    font-weight: 900;
+}
+nav{
+display: inline-block;
+position: absolute;
+right: 50px;
+font-size: smaller;
+}
+nav a{
+    padding-right: 30px;
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 300;
+    font-style: normal;
+}
+nav a:hover{
+    color: #00BCD4;
+}
+nav .log{
+font-size:medium;
+padding: 5px 14px;
+border-radius: 7px;
+font-weight: 700;
+}
+nav .log:hover{
+    background: #00BCD4;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    width: 350px;
+    overflow: hidden;
+    background: black;
+    z-index: 10;
+    transform: scale(0);
+    border: inset;
+}
+
+.wrapper .cross{
+position: absolute;
+right: 0px;
+top: 0px;
+background: red;
+border: 1px solid black;
+padding: 9px;
+z-index: 5;
+border-radius: 0px 0px 0px 10px;
+cursor: pointer;
+}
+
+.wrapper .form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper form{
+    width: 290px;
+}
+.form h2{
+    padding: 15px 0px 40px 0px;
+}
+.wrapper.active-login{
+    transition: transform .18s ease;
+    transform: scale(1);
+}
+.wrapper .form.login-form{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper .form.register-form{
+    position: absolute;
+    transform: translate(350px);
+}
+.wrapper.active .form.login-form{
+    transform: translate(-350px);
+    height: 400px;
+}
+.wrapper.active .form.register-form{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.login{
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+}
+.login input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    color: #00BCD4;
+    border-style: none;
+}
+
+.submit{
+    margin: 15px auto;
+    width: 100%;
+    font-size: large;
+    padding: 5px 0px;
+    border-radius: 22px;
+    border-style: groove;
+    font-weight: 500;
+    background-color: #ffff;
+
+}
+.submit:hover{
+    background: #00BCD4;
+    box-shadow: 0px 0px 15px 1px #00BCD4;
+    color: #ffff;
+}
+
+.container{
+    padding: 50px;
+}
+.sections{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #ffff;
+    text-shadow: 2px 3px 0px #FF0000;
+    font-family: cursive;
+}
+.text{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.sections input[type="checkbox"]{
+    opacity: 0;
+}
+.sections [type="checkbox"]:checked + label[for=numbers] {
+    text-shadow: 2px 3px 0px #00BCD4;
+}
+.sections [type="checkbox"]:checked + label[for=letters] {
+    text-shadow: 2px 3px 0px #00BCD4;
+}
+.sections [type="checkbox"]:checked + label[for=upperCases] {
+    text-shadow: 2px 3px 0px #00BCD4;
+}
+.sections [type="checkbox"]:checked + label[for=specialCharacters] {
+    text-shadow: 2px 3px 0px #00BCD4;
+}
+
+
+.sections div{
+    height: 75px;
+    padding: 0px 13px;
+}
+
+footer{
+    margin-top: 100px;
+    width: 85%;
+}
+footer form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+footer input{
+    margin: 50px;
+    padding: 4px;
+    color: black;
+    font-weight: 600;
+    width: 191px;
+    height: 45px;
+    background: #00BCD4;
+    box-shadow: 0px 0px 10px 6px #00BCD4;
+    border-color: aqua;
+    border-style: dashed;
+    outline: none;
+}
+::placeholder{
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+footer button{
+    padding: 15px 25px;
+    border-radius: 13px;
+    background: #000000;
+    color: red;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 50px;
+    border: double;
+    font-family: system-ui;
+    text-shadow: 0px 1px 2px black;
+    box-shadow: 0px 0px 14px 4px darkred;
+}
+footer button:hover{
+    color: #00BCD4;
+    background: black;
+    box-shadow: 0px 0px 14px 4px powderblue;
+}
+footer p{
+    font-size: 5rem;
+}
+footer .box{
+    border: 1px solid cyan;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    bottom: 50px;
+    right: 95px;
+    background-image: url("/backgroundVideo/pexels-gamol-11584395\ \(2160p\).mp4");
+}
+
+footer .box h5{
+    padding: 9px;
+    background: #494747;
+    border-bottom: 1px solid cyan;
+    margin: 0px;
+    text-align: center;
+    color: cyan;
+}
+footer .box .list{
+    overflow: auto;
+    height: 230px;
+    width: 248px;
+    background-repeat: no-repeat;
+    background: url(/backgroundVideo/giphy.gif);
+    background-position: bottom;
+    background-size: cover;
+}
+footer .box .list #passList{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    background: black;
+    opacity: 0.8;
+}
+footer .box .list #passList .passListItems{
+    position: relative;
+    padding: 5px;
+    border-bottom: 2px solid red;
+}
+.delete{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+}
+.delete:hover{
+    filter: grayscale(0%);
+    color: red;
+}
+
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Password Manager</title>
+</head>
+
+<body>
+
+    <video autoplay loop muted plays-inline src="/backgroundVideo/pexels-crazy-motions-12920674 (1080p).mp4"></video>
+
+    <header>
+        <!-- <h2>Website</h2> -->
+        <span id="user">user</span>
+       <nav>
+        <a href="#" id="home">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <button class="loginBtn log">LogIn</button>
+        <button class="logoutBtn log" style="display: none;" onclick="logOut()">LogOut</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        
+        <span class="cross"><ion-icon name="close-outline"></ion-icon></span>
+        
+        <div class="form register-form">
+            <h2>Register</h2>
+            <form autocomplete="off" onsubmit="signup(event)">
+                <div class="login">
+                    <input type="text" id="username" placeholder="Full Name" required>
+                    <!-- <label>Name</label> -->
+                </div>
+                <div class="login">
+                <input type="email" id="email" placeholder="Email" required>
+                <!-- <label>Email</label> -->
+                </div>
+                <div class="login">
+                    <input type="password" id="password" placeholder="Password" required>
+                <!-- <label>Password</label> -->
+                </div>
+
+                <div class="reme-forg">
+                    <label><input type="checkbox"> I agree to the term and conditions.</label>
+                </div>
+
+                <button class="submit" type="submit" id="register">Submit</button>
+
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+                
+            </form>
+        </div>
+        
+        <div class="form login-form">
+            <h2>Login</h2>
+            <form autocomplete="on" onsubmit="logIn(event)">
+                <div class="login">
+                <input type="email" id="login_email" placeholder="Email" required>
+                <!-- <label>Email</label> -->
+                </div>
+                <div class="login">
+                    <input type="password" id="login_password" placeholder="Password" required>
+                <!-- <label>Password</label> -->
+                </div>
+
+                <div class="reme-forg">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password</a>
+                </div>
+                
+                <button class="submit" type="submit" id="login">Submit</button>
+                
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="sections">
+            <div>
+                <input type="checkbox" name="checkbox" id="numbers" value="text" class="">
+                <label class="text" for="numbers">Numbers</label>
+            </div>
+
+        <div>
+            <div>
+                <input type="checkbox" name="checkbox" id="letters" value="text">
+                <label class="text" for="letters">Letters</label>
+            </div>
+
+        </div>
+
+        <div>
+            <div>
+                <input type="checkbox" name="checkbox" id="upperCases" value="text">
+                <label class="text" for="upperCases">Upper Case</label>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="checkbox" name="checkbox" id="specialCharacters" value="text">
+                <label class="text" for="specialCharacters">Special Characters</label>
+            </div>
+    </div>
+
+    <div>
+        <h4>Password Length</h4>
+        <div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value='4' checked>
+                <label class="form-check-label" for="inlineRadio1">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value='6'>
+                <label class="form-check-label" for="inlineRadio2">6</label>
+              </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value='8'>
+                <label class="form-check-label" for="inlineRadio1">8</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value='12'>
+                <label class="form-check-label" for="inlineRadio2">12</label>
+              </div>
+        </div>
+    </div> 
+</div>
+
+
+<!-- <div class="deleteConformation">
+    <p>Are you sure, you want to delete this password?</p>
+    <button id="delete">Delete</button>
+    <button id="cancel">Cancel</button>
+</div> -->
+
+<footer>
+    <form onsubmit="generatePassword(event)">
+    <input id="passName" type="text" placeholder="Creating For..." required>
+    <button type="submit" id="gPass">Generate</button>
+    <!-- <p id="output"> </p> -->
+        </form>
+    <div class="box">
+        <h5>Your Passwords</h5>
+
+        <div class="list">
+            <ul id="passList">
+            </ul>
+        </div>
+    </div>
+    
+</footer>
+</div>
+    
+
+<div class="toaster">
+    <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            <!-- Hello, world! This is a toast message. -->
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+</div>
+
+
+
+<script src="wrapper.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBEWb9UT33W4P1rDUbKiHX7-RByc4lgl7c",
+    authDomain: "password-manager-86ab4.firebaseapp.com",
+    projectId: "password-manager-86ab4", 
+    storageBucket: "password-manager-86ab4.appspot.com",
+    messagingSenderId: "383422328657",
+    appId: "1:383422328657:web:9d548d41140e41e228ed70",
+    measurementId: "G-MPZXW2CDP6"
+  };
+
+  //Initilize firebase.
+  firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="firebase.js"></script>
+  <script src="firestore.js"></script>
+  <script src="createPassword.js"></script>
+</body>
+</html>
